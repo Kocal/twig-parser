@@ -1,0 +1,12 @@
+{
+  "name": "@kocal/twig-parser",
+  "version": "0.0.0-development",
+  "description": "A parser for Twig files, in JavaScript.",
+  "files": ["dist"],
+  "main": "dist/index.js",
+  "module": "dist/index.es.js",
+  "typings": "dist/index.d.ts",
+  "repository": "https://github.com/Kocal/twig-parser.git",
+  "author": "Hugo Alliaume <kocal@live.fr>",
+  "license": "MIT"
+}
