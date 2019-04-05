@@ -57,7 +57,7 @@ console.log(ast);
 ### In the Browser
 
 ```html
-<script src="https://unpkg.com/@kocal/twig-parser/dist/twig-parser.min.js"></script>
+<script src="https://unpkg.com/@kocal/twig-parser/dist/browser.min.js"></script>
 <script>
 const code = '{{ "Put your Twig code here "}}';
 const tokens = TwigParser.tokenize(code);

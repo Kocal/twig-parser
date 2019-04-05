@@ -2,11 +2,26 @@
   "name": "@kocal/twig-parser",
   "version": "0.0.0-development",
   "description": "A parser for Twig files, in JavaScript.",
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "main": "dist/index.js",
   "module": "dist/index.es.js",
   "typings": "dist/index.d.ts",
   "repository": "https://github.com/Kocal/twig-parser.git",
   "author": "Hugo Alliaume <kocal@live.fr>",
-  "license": "MIT"
+  "license": "MIT",
+  "scripts": {
+    "clean": "rm -fr dist",
+    "prebuild": "npm run clean",
+    "build": "rollup -c",
+    "watch": "rollup -cw",
+    "prepack": "npm run build"
+  },
+  "devDependencies": {
+    "rollup": "^1.9.0",
+    "rollup-plugin-terser": "^4.0.4",
+    "rollup-plugin-typescript2": "^0.20.1",
+    "typescript": "^3.4.2"
+  }
 }
