@@ -1,16 +1,13 @@
 import typescript from 'rollup-plugin-typescript2';
 import pkg from './package.json';
+import { terser } from "rollup-plugin-terser";
 
 export default {
   input: 'src/index.ts',
   output: [
     {
-      file: pkg.main,
-      format: 'cjs',
-    },
-    {
-      file: pkg.module,
-      format: 'es',
+      file: 'dist/browser.min.js',
+      format: 'umd',
     },
   ],
   external: [
@@ -21,5 +18,6 @@ export default {
     typescript({
       typescript: require('typescript'),
     }),
+    terser(),
   ],
 };
