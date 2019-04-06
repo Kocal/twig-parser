@@ -2,7 +2,11 @@
   "name": "@kocal/twig-parser",
   "version": "0.0.0-development",
   "description": "JavaScript parser for Twig files, based on Twing.",
-  "keywords": ["javascript", "twig", "parser"],
+  "keywords": [
+    "javascript",
+    "twig",
+    "parser"
+  ],
   "files": [
     "dist"
   ],
@@ -17,8 +21,9 @@
     "clean": "rm -fr dist",
     "prebuild": "npm run clean",
     "build": "rollup -c",
-    "watch": "rollup -cw",
-    "prepack": "npm run build",
+    "build:browser": "rollup -c rollup.browser.config.js",
+    "build:all": "npm run build && npm run build:browser",
+    "prepack": "npm run build:all",
     "pretest": "npm run build",
     "test": "jest"
   },
@@ -27,6 +32,10 @@
     "jest": "^24.7.1",
     "prettier": "^1.16.4",
     "rollup": "^1.9.0",
+    "rollup-plugin-alias": "^1.5.1",
+    "rollup-plugin-commonjs": "^9.3.4",
+    "rollup-plugin-json": "^4.0.0",
+    "rollup-plugin-node-resolve": "^4.2.0",
     "rollup-plugin-terser": "^4.0.4",
     "rollup-plugin-typescript2": "^0.20.1",
     "typescript": "^3.4.2"

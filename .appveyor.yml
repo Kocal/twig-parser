@@ -17,4 +17,5 @@ build: off
 
 test_script:
   - yarn run lint
+  - yarn run build:browser
   - yarn run test
