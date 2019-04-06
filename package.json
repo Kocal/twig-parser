@@ -1,0 +1,49 @@
+{
+  "name": "@kocal/twig-parser",
+  "version": "0.0.0-development",
+  "description": "JavaScript parser for Twig files, based on Twing.",
+  "keywords": ["javascript", "twig", "parser"],
+  "files": [
+    "dist"
+  ],
+  "main": "dist/index.js",
+  "module": "dist/index.es.js",
+  "typings": "dist/index.d.ts",
+  "repository": "https://github.com/Kocal/twig-parser.git",
+  "author": "Hugo Alliaume <kocal@live.fr>",
+  "license": "MIT",
+  "scripts": {
+    "lint": "eslint src/**/*.ts --fix",
+    "clean": "rm -fr dist",
+    "prebuild": "npm run clean",
+    "build": "rollup -c",
+    "watch": "rollup -cw",
+    "prepack": "npm run build",
+    "pretest": "npm run build",
+    "test": "jest"
+  },
+  "devDependencies": {
+    "eslint-config-prettier": "^4.1.0",
+    "jest": "^24.7.1",
+    "prettier": "^1.16.4",
+    "rollup": "^1.9.0",
+    "rollup-plugin-terser": "^4.0.4",
+    "rollup-plugin-typescript2": "^0.20.1",
+    "typescript": "^3.4.2"
+  },
+  "dependencies": {
+    "@typescript-eslint/eslint-plugin": "^1.6.0",
+    "eslint": "^5.16.0"
+  },
+  "eslintConfig": {
+    "parser": "@typescript-eslint/parser",
+    "plugins": [
+      "@typescript-eslint"
+    ],
+    "extends": [
+      "plugin:@typescript-eslint/recommended",
+      "prettier",
+      "prettier/@typescript-eslint"
+    ]
+  }
+}
