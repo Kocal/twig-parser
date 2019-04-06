@@ -8,6 +8,7 @@ export default {
     {
       file: 'dist/browser.min.js',
       format: 'umd',
+      name: 'TwigParser'
     },
   ],
   external: [
