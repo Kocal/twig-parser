@@ -1,7 +1,8 @@
 {
   "name": "@kocal/twig-parser",
   "version": "0.0.0-development",
-  "description": "A parser for Twig files, in JavaScript.",
+  "description": "JavaScript parser for Twig files, based on Twing.",
+  "keywords": ["javascript", "twig", "parser"],
   "files": [
     "dist"
   ],

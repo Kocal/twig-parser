@@ -4,7 +4,7 @@
 [![Build Status](https://travis-ci.com/Kocal/twig-parser.svg?branch=master)](https://travis-ci.com/Kocal/twig-parser)
 [![Build status](https://ci.appveyor.com/api/projects/status/shao5hhh8oqyorbn/branch/master?svg=true)](https://ci.appveyor.com/project/Kocal/twig-parser/branch/master)
 
-> A parser for Twig files, in JavaScript.
+> JavaScript parser for [Twig](https://twig.symfony.com/) files, based on [Twing](https://github.com/ericmorand/twing).
 
 ## WORK IN PROGRESS
 
