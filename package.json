@@ -17,7 +17,7 @@
   "author": "Hugo Alliaume <kocal@live.fr>",
   "license": "MIT",
   "scripts": {
-    "lint": "eslint {src,test}/**/*.{ts,js} --fix",
+    "lint": "eslint {src,test}/**/*.{ts,js}",
     "clean": "rm -fr dist",
     "prebuild": "npm run clean",
     "build": "rollup -c",
