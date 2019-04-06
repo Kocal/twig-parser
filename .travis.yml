@@ -27,6 +27,7 @@ install:
 
 script:
   - yarn run lint
+  - yarn run build:browser
   - yarn run test
 
 # To uncomment when we will setup semantic-release
