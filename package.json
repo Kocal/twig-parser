@@ -17,8 +17,9 @@
     "clean": "rm -fr dist",
     "prebuild": "npm run clean",
     "build": "rollup -c",
-    "watch": "rollup -cw",
-    "prepack": "npm run build",
+    "build:browser": "rollup -c rollup.browser.config.js",
+    "build:all": "npm run build && npm run build:browser",
+    "prepack": "npm run build:all",
     "pretest": "npm run build",
     "test": "jest"
   },
