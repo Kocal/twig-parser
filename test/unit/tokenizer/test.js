@@ -1,6 +1,11 @@
-const { TwingTokenStream, TwingToken, TwingSource } = require("twing");
+const {
+  TwingTokenStream,
+  TwingToken,
+  TwingSource,
+  TwingErrorSyntax
+} = require("twing");
 
-const { tokenize } = require("../../dist");
+const { tokenize } = require("../../../dist");
 
 describe("Tokenizer", () => {
   it("should tokenize", () => {
@@ -26,6 +31,16 @@ describe("Tokenizer", () => {
         ],
         new TwingSource(`{% set foo = [1, 2, 3] %}`, `code.twig`)
       )
+    );
+  });
+
+  it("should throw an error", () => {
+    const code = `{% set foo = [`;
+
+    expect(() => {
+      tokenize(code);
+    }).toThrowError(
+      new TwingErrorSyntax('Unclosed "[" in "code.twig" at line 1.')
     );
   });
 });
