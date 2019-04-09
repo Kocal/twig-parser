@@ -20,12 +20,12 @@ describe("TwigNode", () => {
       expect(node.getNodes()).toEqual(new Map([["foo", fooNode]]));
     });
 
-    it("hasNode()", () => {
+    test("hasNode()", () => {
       expect(node.hasNode("foo")).toBeTruthy();
       expect(node.hasNode("bar")).toBeFalsy();
     });
 
-    it("getNode()", () => {
+    test("getNode()", () => {
       expect(node.getNode("foo")).toBe(fooNode);
 
       expect(() => {
@@ -33,7 +33,7 @@ describe("TwigNode", () => {
       }).toThrow(`The node "bar" from "TwigNode" does not exist.`);
     });
 
-    it("setNode()", () => {
+    test("setNode()", () => {
       const barNode = new TwigNode();
       node.setNode("bar", barNode);
       expect(node.getNode("bar")).toBe(barNode);
@@ -49,19 +49,20 @@ describe("TwigNode", () => {
       expect(node.getAttributes()).toEqual(new Map([["attr", "value"]]));
     });
 
-    it("hasAttribute()", () => {
+    test("hasAttribute()", () => {
       expect(node.hasAttribute("attr")).toBeTruthy();
       expect(node.hasAttribute("bar")).toBeFalsy();
     });
 
-    it("getAttribute()", () => {
+    test("getAttribute()", () => {
       expect(node.getAttribute("attr")).toBe("value");
 
       expect(() => {
         node.getAttribute("bar");
       }).toThrow(`The attribute "bar" from "TwigNode" does not exist.`);
     });
-    it("setAttribute()", () => {
+
+    test("setAttribute()", () => {
       node.setAttribute("bar", "bar value");
       expect(node.getAttribute("bar")).toBe("bar value");
     });
