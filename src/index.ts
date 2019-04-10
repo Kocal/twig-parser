@@ -1,2 +1,3 @@
 export { tokenize } from "./tokenizer";
-export { TwigNode } from "./node";
+export { parse } from "./parser";
+export { TwigNode } from "./twig/node";
